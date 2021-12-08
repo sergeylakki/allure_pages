@@ -61,7 +61,7 @@ def test_get_breed_images(dog_api, file):
 def test_get_random_breed_images(dog_api, breed):
     response = dog_api.get(f"breed/{breed}/images/")
     response = response.json()
-    assert response["status"] == "error", f"Не удалось получить список изображений породы {breed}"
+    assert response["status"] == "success", f"Не удалось получить список изображений породы {breed}"
 
 
 @allure.feature('List of dog images')

@@ -17,4 +17,4 @@ jobs:
       with:
         python-version: '3.8'
     - run: pip install -r requirements.txt
-    - run: pytest
+    - run: pytest -n=4 --alluredir=./allure-results tests/test_dog_api.py # Запускаем тесты параллельно(-n=4 обеспечивает нам это), указав папку с результатами тестов через --alluredir=
