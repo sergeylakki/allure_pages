@@ -56,7 +56,7 @@ def test_get_breed_images(dog_api, file):
     "shiba",
     "whippet",
     "spaniel",
-    "dvornyaga"
+    pytest.param("dvornyaga", marks = pytest.mark.xfail)
 ])
 def test_get_random_breed_images(dog_api, breed):
     response = dog_api.get(f"breed/{breed}/images/")
